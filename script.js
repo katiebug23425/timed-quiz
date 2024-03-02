@@ -51,3 +51,9 @@ options: [
 answer: '||'
 },
 ];
+
+//Get DOM Elements
+
+let testQuestionsEL = document.querySelector('#testQuestions');
+
+let timeEl = document.querySelector('#time');
