@@ -52,8 +52,17 @@ answer: '||'
 },
 ];
 
-//Get DOM Elements
+//Get Elements from DOM
 
 let testQuestionsEL = document.querySelector('#testQuestions');
 
 let timeEl = document.querySelector('#time');
+
+let optionsEl = document.querySelector('#choices');
+
+let beginBtnEl = document.querySelector('#start-btn');
+
+let nameEL = document.querySelector('#initials');
+
+let btnSubmitEL = document.querySelector('#submitScore');
+
