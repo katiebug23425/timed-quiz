@@ -20,6 +20,13 @@
 
 }
 
+.timer {
+color: red;
+font-size: larger;
+font-weight: 600;
+
+}
+
 button {
 display: inline-block;
 cursor: pointer;
@@ -34,4 +41,9 @@ border: 0;
 
 button:hover {
 background-color:darkviolet;
+}
+
+.hide {
+display: none;
+
 }
