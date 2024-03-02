@@ -50,25 +50,4 @@ options: [
 ],
 answer: '||'
 },
-];
-
-//Get Elements from DOM
-
-let testQuestionsEL = document.getElementById('#testQuestions');
-
-let timeEl = document.getElementById('#time');
-
-let optionsEl = document.getElementById('#choices');
-
-let beginBtnEl = document.getElementById('#start-btn');
-
-let nameEL = document.getElementById('#initials');
-
-let btnSubmitEL = document.getElementById('#submitScore');
-
-var secondsLeft = 90;
-
-function startQuiz() {
-
-
-}
+]
