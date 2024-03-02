@@ -66,10 +66,9 @@ let nameEL = document.getElementById('#initials');
 
 let btnSubmitEL = document.getElementById('#submitScore');
 
+var secondsLeft = 90;
 
 function startQuiz() {
-timeId = setInterval(
-  1000  
-);
+
 
 }
