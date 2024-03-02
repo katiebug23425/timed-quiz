@@ -10,7 +10,7 @@ answer: 'boolean',
     },
 
 
-{prompt: 'Which of thre following git commands create a new file?',
+{prompt: 'Which of the following git commands create a new file?',
 options: [
     'mkdir',
     'ls',
@@ -54,15 +54,22 @@ answer: '||'
 
 //Get Elements from DOM
 
-let testQuestionsEL = document.querySelector('#testQuestions');
+let testQuestionsEL = document.getElementById('#testQuestions');
 
-let timeEl = document.querySelector('#time');
+let timeEl = document.getElementById('#time');
 
-let optionsEl = document.querySelector('#choices');
+let optionsEl = document.getElementById('#choices');
 
-let beginBtnEl = document.querySelector('#start-btn');
+let beginBtnEl = document.getElementById('#start-btn');
 
-let nameEL = document.querySelector('#initials');
+let nameEL = document.getElementById('#initials');
 
-let btnSubmitEL = document.querySelector('#submitScore');
+let btnSubmitEL = document.getElementById('#submitScore');
 
+
+function startQuiz() {
+timeId = setInterval(
+  1000  
+);
+
+}
