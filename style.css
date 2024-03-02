@@ -24,6 +24,7 @@
 color: red;
 font-size: larger;
 font-weight: 600;
+text-align: center;
 
 }
 
@@ -46,4 +47,8 @@ background-color:darkviolet;
 .hide {
 display: none;
 
+}
+
+.topSection, .beginning {
+  text-align: center;
 }
