@@ -51,7 +51,7 @@ display: none;
 
 }
 
-.cool {
+.cool, .cool1, .cool2, .cool3, .cool4 {
   background-color: fuchsia;
   color:ghostwhite;
 }
