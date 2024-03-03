@@ -94,7 +94,8 @@ startButton.addEventListener('click', function() {
 let displayMessage = 'That is incorrect! The right answer is Boolean'
 
 function handleClick() {
-    alert(displayMessage)};
+    alert(displayMessage)
+    count = count -10;};
 incorrect1.addEventListener('click', handleClick);
 incorrect2.addEventListener('click', handleClick);
 incorrect3.addEventListener('click', handleClick);
@@ -102,7 +103,8 @@ incorrect3.addEventListener('click', handleClick);
 let secondMessage = 'That is incorrect! The right answer is Touch'
 
 function handleClick1() {
-    alert(secondMessage)};
+    alert(secondMessage)
+count= count -10;};
 incorrect4.addEventListener('click', handleClick1);
 incorrect5.addEventListener('click', handleClick1);
 incorrect6.addEventListener('click', handleClick1);
@@ -110,7 +112,8 @@ incorrect6.addEventListener('click', handleClick1);
 let thirdMessage = 'That is incorrect! The right answer is Bootstrap'
 
 function handleClick2() {
-    alert(thirdMessage)};
+    alert(thirdMessage)
+count = count -10;};
 incorrect7.addEventListener('click', handleClick2);
 incorrect8.addEventListener('click', handleClick2);
 incorrect9.addEventListener('click', handleClick2);
@@ -118,7 +121,8 @@ incorrect9.addEventListener('click', handleClick2);
 let fourthMessage = 'That is incorrect! The right answer is Padding'
 
 function handleClick3() {
-    alert(fourthMessage)};
+    alert(fourthMessage)
+    count = count - 10;};
 incorrect10.addEventListener('click', handleClick3);
 incorrect11.addEventListener('click', handleClick3);
 incorrect12.addEventListener('click', handleClick3);
@@ -126,7 +130,8 @@ incorrect12.addEventListener('click', handleClick3);
 let fifthMessage = 'That is incorrect! The right answer is ||'
 
 function handleClick4() {
-    alert(fifthMessage)};
+    alert(fifthMessage)
+    count = count - 10;};
 incorrect13.addEventListener('click', handleClick4);
 incorrect14.addEventListener('click', handleClick4);
 incorrect15.addEventListener('click', handleClick4);
