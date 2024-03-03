@@ -56,7 +56,7 @@ display: none;
   color:ghostwhite;
 }
 
-.topSection, .beginning, #firstQuestion, #secondQuestion, #thirdQuestion, #fourthQuestion, #lastQuestion {
+.topSection, .beginning, #firstQuestion, #secondQuestion, #thirdQuestion, #fourthQuestion, #lastQuestion, #end {
   text-align: center;
 }
 

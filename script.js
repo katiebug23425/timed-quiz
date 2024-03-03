@@ -1,3 +1,4 @@
+//get dom elements
 var allButtons = document.querySelectorAll('.cool');
 var allButtons1 = document.querySelectorAll('.cool1');
 var allButtons2 = document.querySelectorAll('.cool2');
@@ -12,6 +13,8 @@ var screen3 = document.querySelector('#secondQuestion');
 var screen4 = document.querySelector('#thirdQuestion');
 var screen5 = document.querySelector('#fourthQuestion');
 var screen6 = document.querySelector('#lastQuestion');
+
+//start quiz questions
 
 startButton.addEventListener('click', function() {
     screen1.classList.add('hide');
