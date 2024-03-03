@@ -75,18 +75,11 @@ allButtons4.forEach(function(button) {
 //start timer
 
 
-let count = 20; 
+let count = 30; 
 let timerDisplay;
 
 startButton.addEventListener('click', function() {
-    timerDisplay = setInterval(() => {
-        if (count === 0) {
-            clearInterval(timerDisplay);
-        } else {
-            count--;
-            document.getElementById('time').textContent = 'Time Left: ' + count;
-        }
-    }, 1000);
+    timerDisplay = setInterval(updateTimerDisplay, 1000);
 });
 
 //check if answers are correct or wrong
@@ -95,7 +88,8 @@ let displayMessage = 'That is incorrect! The right answer is Boolean'
 
 function handleClick() {
     alert(displayMessage)
-    count = count -10;};
+    count = count -10;
+    updateTimer();};
 incorrect1.addEventListener('click', handleClick);
 incorrect2.addEventListener('click', handleClick);
 incorrect3.addEventListener('click', handleClick);
@@ -104,7 +98,8 @@ let secondMessage = 'That is incorrect! The right answer is Touch'
 
 function handleClick1() {
     alert(secondMessage)
-count= count -10;};
+count= count -10;
+updateTimer();};
 incorrect4.addEventListener('click', handleClick1);
 incorrect5.addEventListener('click', handleClick1);
 incorrect6.addEventListener('click', handleClick1);
@@ -113,16 +108,19 @@ let thirdMessage = 'That is incorrect! The right answer is Bootstrap'
 
 function handleClick2() {
     alert(thirdMessage)
-count = count -10;};
+count = count -10;
+updateTimer();};
 incorrect7.addEventListener('click', handleClick2);
 incorrect8.addEventListener('click', handleClick2);
 incorrect9.addEventListener('click', handleClick2);
+
 
 let fourthMessage = 'That is incorrect! The right answer is Padding'
 
 function handleClick3() {
     alert(fourthMessage)
-    count = count - 10;};
+    count = count - 10;
+    updateTimer();};
 incorrect10.addEventListener('click', handleClick3);
 incorrect11.addEventListener('click', handleClick3);
 incorrect12.addEventListener('click', handleClick3);
@@ -131,9 +129,27 @@ let fifthMessage = 'That is incorrect! The right answer is ||'
 
 function handleClick4() {
     alert(fifthMessage)
-    count = count - 10;};
+    count = count - 10;
+    updateTimer();};
 incorrect13.addEventListener('click', handleClick4);
 incorrect14.addEventListener('click', handleClick4);
 incorrect15.addEventListener('click', handleClick4);
 
+function updateTimer() {
+    if (count <= 0) {
+        clearInterval(timerDisplay);
+        document.getElementById('time').textContent = 'Time Left: 0';
+    } else {
+        document.getElementById('time').textContent = 'Time Left: ' + count;
+    }
+}
+
+    function updateTimerDisplay() {
+        if (count === 0) {
+            clearInterval(timerDisplay);
+        } else {
+            count--;
+            document.getElementById('time').textContent = 'Time Left: ' + count;
+        }
+    }
 
