@@ -20,9 +20,6 @@ var screen4 = document.querySelector('#thirdQuestion');
 var screen5 = document.querySelector('#fourthQuestion');
 var screen6 = document.querySelector('#lastQuestion');
 
-let timerDisplay;
-let count = 30;
-
 //start quiz questions
 
 startButton.addEventListener('click', function() {
@@ -67,10 +64,17 @@ allButtons4.forEach(function(button) {
 
 //start timer
 
-startButton.addEventListener('click', function() {
-timerDisplay = setInterval(function () {
-    count--;
-    document.getElementById('time').textContent = 'Time Left: ' + count;
-}, 1000); 
 
+let count = 20; 
+let timerDisplay;
+
+startButton.addEventListener('click', function() {
+    timerDisplay = setInterval(() => {
+        if (count === 0) {
+            clearInterval(timerDisplay);
+        } else {
+            count--;
+            document.getElementById('time').textContent = 'Time Left: ' + count;
+        }
+    }, 1000);
 });
