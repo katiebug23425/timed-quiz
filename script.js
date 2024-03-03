@@ -23,6 +23,12 @@ var incorrect13 = document.getElementById('andBtn');
 var incorrect14 = document.getElementById('equalBtn');
 var incorrect15 = document.getElementById('plusminusBtn');
 
+var correct1 = document.getElementById('booleanBtn');
+var correct2 = document.getElementById('touchBtn');
+var correct3 = document.getElementById('bootstrapBtn');
+var correct4 = document.getElementById('paddingBtn');
+var correct5 = document.getElementById('orBtn');
+
 var screen1 = document.querySelector('#startScreen');
 var screen2 = document.querySelector('#firstQuestion');
 var screen3 = document.querySelector('#secondQuestion');
@@ -77,6 +83,7 @@ allButtons4.forEach(function(button) {
 
 let count = 30; 
 let timerDisplay;
+let userScore = 0;
 
 startButton.addEventListener('click', function() {
     timerDisplay = setInterval(updateTimerDisplay, 1000);
@@ -94,6 +101,8 @@ incorrect1.addEventListener('click', handleClick);
 incorrect2.addEventListener('click', handleClick);
 incorrect3.addEventListener('click', handleClick);
 
+correct1.addEventListener('click', updateUserScore);
+
 let secondMessage = 'That is incorrect! The right answer is Touch'
 
 function handleClick1() {
@@ -104,6 +113,8 @@ incorrect4.addEventListener('click', handleClick1);
 incorrect5.addEventListener('click', handleClick1);
 incorrect6.addEventListener('click', handleClick1);
 
+correct2.addEventListener('click', updateUserScore);
+
 let thirdMessage = 'That is incorrect! The right answer is Bootstrap'
 
 function handleClick2() {
@@ -113,6 +124,8 @@ updateTimer();};
 incorrect7.addEventListener('click', handleClick2);
 incorrect8.addEventListener('click', handleClick2);
 incorrect9.addEventListener('click', handleClick2);
+
+correct3.addEventListener('click', updateUserScore);
 
 
 let fourthMessage = 'That is incorrect! The right answer is Padding'
@@ -125,6 +138,8 @@ incorrect10.addEventListener('click', handleClick3);
 incorrect11.addEventListener('click', handleClick3);
 incorrect12.addEventListener('click', handleClick3);
 
+correct4.addEventListener('click', updateUserScore);
+
 let fifthMessage = 'That is incorrect! The right answer is ||'
 
 function handleClick4() {
@@ -134,6 +149,8 @@ function handleClick4() {
 incorrect13.addEventListener('click', handleClick4);
 incorrect14.addEventListener('click', handleClick4);
 incorrect15.addEventListener('click', handleClick4);
+
+correct5.addEventListener('click', updateUserScore);
 
 function updateTimer() {
     if (count <= 0) {
@@ -152,4 +169,8 @@ function updateTimer() {
             document.getElementById('time').textContent = 'Time Left: ' + count;
         }
     }
+
+function updateUserScore() {
+    userScore = userScore + 10;
+}
 
