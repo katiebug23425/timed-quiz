@@ -92,66 +92,42 @@ startButton.addEventListener('click', function() {
 
 //check if answers are correct or wrong
 
-let displayMessage = 'That is incorrect! The right answer is Boolean'
+let displayMessage = 'That is incorrect!'
 
 function handleClick() {
     alert(displayMessage)
     count = count -10;
     updateTimer();};
+
 incorrect1.addEventListener('click', handleClick);
 incorrect2.addEventListener('click', handleClick);
 incorrect3.addEventListener('click', handleClick);
 
-correct1.addEventListener('click', updateUserScore());
+correct1.addEventListener('click', updateUserScore);
 
-let secondMessage = 'That is incorrect! The right answer is Touch'
+incorrect4.addEventListener('click', handleClick);
+incorrect5.addEventListener('click', handleClick);
+incorrect6.addEventListener('click', handleClick);
 
-function handleClick1() {
-    alert(secondMessage)
-count= count -10;
-updateTimer();};
-incorrect4.addEventListener('click', handleClick1);
-incorrect5.addEventListener('click', handleClick1);
-incorrect6.addEventListener('click', handleClick1);
+correct2.addEventListener('click', updateUserScore);
 
-correct2.addEventListener('click', updateUserScore());
+incorrect7.addEventListener('click', handleClick);
+incorrect8.addEventListener('click', handleClick);
+incorrect9.addEventListener('click', handleClick);
 
-let thirdMessage = 'That is incorrect! The right answer is Bootstrap'
+correct3.addEventListener('click', updateUserScore);
 
-function handleClick2() {
-    alert(thirdMessage)
-count = count -10;
-updateTimer();};
-incorrect7.addEventListener('click', handleClick2);
-incorrect8.addEventListener('click', handleClick2);
-incorrect9.addEventListener('click', handleClick2);
+incorrect10.addEventListener('click', handleClick);
+incorrect11.addEventListener('click', handleClick);
+incorrect12.addEventListener('click', handleClick);
 
-correct3.addEventListener('click', updateUserScore());
+correct4.addEventListener('click', updateUserScore);
 
+incorrect13.addEventListener('click', handleClick);
+incorrect14.addEventListener('click', handleClick);
+incorrect15.addEventListener('click', handleClick);
 
-let fourthMessage = 'That is incorrect! The right answer is Padding'
-
-function handleClick3() {
-    alert(fourthMessage)
-    count = count - 10;
-    updateTimer();};
-incorrect10.addEventListener('click', handleClick3);
-incorrect11.addEventListener('click', handleClick3);
-incorrect12.addEventListener('click', handleClick3);
-
-correct4.addEventListener('click', updateUserScore());
-
-let fifthMessage = 'That is incorrect! The right answer is ||'
-
-function handleClick4() {
-    alert(fifthMessage)
-    count = count - 10;
-    updateTimer();};
-incorrect13.addEventListener('click', handleClick4);
-incorrect14.addEventListener('click', handleClick4);
-incorrect15.addEventListener('click', handleClick4);
-
-correct5.addEventListener('click', updateUserScore());
+correct5.addEventListener('click', updateUserScore);
 
 //update timer
 
