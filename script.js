@@ -90,6 +90,16 @@ startButton.addEventListener('click', function() {
     timerDisplay = setInterval(updateTimerDisplay, 1000);
 });
 
+function updateUserScore() {
+    userScore = userScore + 10;
+    document.getElementById('finalScore').textContent = 'Your Score Total is: ' + userScore;
+};
+
+function endUpdateUserScore(){
+    userScore.valueOf;
+    document.getElementById('finalScore').textContent = 'Your Score Total is: ' + userScore;
+};
+
 //check if answers are correct or wrong
 
 let displayMessage = 'That is incorrect!'
@@ -136,7 +146,8 @@ function updateTimer() {
         clearInterval(timerDisplay);
         document.getElementById('time').textContent = 'Time Left: 0';
         endScreen.classList.remove('hide');
-        screen4.classList.add('hide');
+        screen6.classList.add('hide');
+       endUpdateUserScore();
     } else {
         document.getElementById('time').textContent = 'Time Left: ' + count;
     }
@@ -149,10 +160,6 @@ function updateTimer() {
             count--;
             document.getElementById('time').textContent = 'Time Left: ' + count;
         }
-    };
-    function updateUserScore() {
-        userScore = userScore + 10;
-        document.getElementById('finalScore').textContent = 'Your Score Total is: ' + userScore;
     };
 
     function getScores() {
