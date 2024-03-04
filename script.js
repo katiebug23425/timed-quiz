@@ -75,6 +75,7 @@ allButtons4.forEach(function(button) {
     button.addEventListener('click', function() {
         screen6.classList.add('hide');
         endScreen.classList.remove('hide');
+        clearInterval(timerDisplay);
     });
 });
 
@@ -152,6 +153,8 @@ incorrect15.addEventListener('click', handleClick4);
 
 correct5.addEventListener('click', updateUserScore());
 
+//update timer
+
 function updateTimer() {
     if (count <= 0) {
         clearInterval(timerDisplay);
@@ -173,5 +176,21 @@ function updateTimer() {
         userScore = userScore + 10;
         document.getElementById('finalScore').textContent = 'Your Score Total is: ' + userScore;
     };
+
+ function getScores(){
+let scoredName = JSON.parse(localStorage.getItem("name")) || [];  
+var getName =  document.getElementById('initials').value;
+console.log(getName)
+const namedScore = {
+    initials: getName, 
+    score: userScore 
+};
+
+scoredName.push(namedScore);
+localStorage.setItem('name', JSON.stringify(namedScore));
+ }
+   
+const scoreBtn = document.getElementById('submitScore');
+scoreBtn.addEventListener('click', getScores);
 
     
