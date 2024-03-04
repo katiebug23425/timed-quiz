@@ -193,4 +193,4 @@ localStorage.setItem('name', JSON.stringify(namedScore));
 const scoreBtn = document.getElementById('submitScore');
 scoreBtn.addEventListener('click', getScores);
 
-    
+ 
