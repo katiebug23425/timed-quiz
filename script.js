@@ -135,6 +135,8 @@ function updateTimer() {
     if (count <= 0) {
         clearInterval(timerDisplay);
         document.getElementById('time').textContent = 'Time Left: 0';
+        endScreen.classList.remove('hide');
+        screen4.classList.add('hide');
     } else {
         document.getElementById('time').textContent = 'Time Left: ' + count;
     }
