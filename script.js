@@ -101,7 +101,7 @@ incorrect1.addEventListener('click', handleClick);
 incorrect2.addEventListener('click', handleClick);
 incorrect3.addEventListener('click', handleClick);
 
-correct1.addEventListener('click', updateUserScore);
+correct1.addEventListener('click', updateUserScore());
 
 let secondMessage = 'That is incorrect! The right answer is Touch'
 
@@ -113,7 +113,7 @@ incorrect4.addEventListener('click', handleClick1);
 incorrect5.addEventListener('click', handleClick1);
 incorrect6.addEventListener('click', handleClick1);
 
-correct2.addEventListener('click', updateUserScore);
+correct2.addEventListener('click', updateUserScore());
 
 let thirdMessage = 'That is incorrect! The right answer is Bootstrap'
 
@@ -125,7 +125,7 @@ incorrect7.addEventListener('click', handleClick2);
 incorrect8.addEventListener('click', handleClick2);
 incorrect9.addEventListener('click', handleClick2);
 
-correct3.addEventListener('click', updateUserScore);
+correct3.addEventListener('click', updateUserScore());
 
 
 let fourthMessage = 'That is incorrect! The right answer is Padding'
@@ -138,7 +138,7 @@ incorrect10.addEventListener('click', handleClick3);
 incorrect11.addEventListener('click', handleClick3);
 incorrect12.addEventListener('click', handleClick3);
 
-correct4.addEventListener('click', updateUserScore);
+correct4.addEventListener('click', updateUserScore());
 
 let fifthMessage = 'That is incorrect! The right answer is ||'
 
@@ -150,7 +150,7 @@ incorrect13.addEventListener('click', handleClick4);
 incorrect14.addEventListener('click', handleClick4);
 incorrect15.addEventListener('click', handleClick4);
 
-correct5.addEventListener('click', updateUserScore);
+correct5.addEventListener('click', updateUserScore());
 
 function updateTimer() {
     if (count <= 0) {
@@ -159,7 +159,7 @@ function updateTimer() {
     } else {
         document.getElementById('time').textContent = 'Time Left: ' + count;
     }
-}
+};
 
     function updateTimerDisplay() {
         if (count === 0) {
@@ -168,9 +168,10 @@ function updateTimer() {
             count--;
             document.getElementById('time').textContent = 'Time Left: ' + count;
         }
-    }
+    };
+    function updateUserScore() {
+        userScore = userScore + 10;
+        document.getElementById('finalScore').textContent = 'Your Score Total is: ' + userScore;
+    };
 
-function updateUserScore() {
-    userScore = userScore + 10;
-}
-
+    
