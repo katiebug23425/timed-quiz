@@ -153,20 +153,28 @@ function updateTimer() {
         document.getElementById('finalScore').textContent = 'Your Score Total is: ' + userScore;
     };
 
- function getScores(){
-let scoredName = JSON.parse(localStorage.getItem("name")) || [];  
-var getName =  document.getElementById('initials').value;
-console.log(getName)
-const namedScore = {
-    initials: getName, 
-    score: userScore 
-};
-
-scoredName.push(namedScore);
-localStorage.setItem('name', JSON.stringify(namedScore));
- }
-   
-const scoreBtn = document.getElementById('submitScore');
-scoreBtn.addEventListener('click', getScores);
-
- 
+    function getScores() {
+        let scoredName = JSON.parse(localStorage.getItem("name")) || [];
+        var getName = document.getElementById('initials').value;
+        console.log(getName);
+        
+        const namedScore = {
+          initials: getName,
+          score: userScore
+        };
+        
+        scoredName.push(namedScore);
+        localStorage.setItem('name', JSON.stringify(scoredName));
+      
+        const orderedList = document.getElementById('highscoreList');
+        orderedList.innerHTML = ''; // Clear the list before re-populating
+      
+        scoredName.forEach((name, index) => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${index + 1}. ${name.initials} - ${name.score}`;
+          orderedList.appendChild(listItem);
+        });
+      }
+      
+      const scoreBtn = document.getElementById('submitScore');
+      scoreBtn.addEventListener('click', getScores);
