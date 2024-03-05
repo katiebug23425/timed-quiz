@@ -12,6 +12,8 @@ Click on the Start Timed Quiz button to start timer and begin the quiz. Read eac
 
 # Link to finished application:
 
+https://katiebug23425.github.io/timed-quiz/
+
 # Credits:
 
 Xpert Learning ASST
